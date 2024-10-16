@@ -1,0 +1,61 @@
+/* styles/style.css */
+
+body {
+    background-color: #000; /* Black background */
+    color: #00ff00; /* Green text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy look */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222; /* Dark gray header */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00ff00; /* Green links */
+    text-decoration: none;
+}
+
+.section-title {
+    border-bottom: 2px solid #00ff00; /* Green underline for section title */
+    margin-bottom: 20px;
+}
+
+.project-item {
+    background-color: #333; /* Dark background for project items */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin: 0;
+    color: #00ff00; /* Green project title */
+}
+
+.project-link {
+    color: #ffcc00; /* Yellow link for project */
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #222; /* Dark gray footer */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
