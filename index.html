@@ -6,81 +6,55 @@
     <title>Cybersecurity Portfolio</title>
     <style>
         body {
-            background-color: #0f0f0f; /* Dark background */
-            color: #e0e0e0; /* Light gray text for readability */
-            font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy feel */
+            background-color: #1a1a1a; /* Dull black background */
+            color: #d3d3d3; /* Light gray text */
+            font-family: 'Courier New', Courier, monospace; /* Monospace font for hacker feel */
             margin: 0;
             display: flex;
-        }
-        .sidebar {
-            background-color: #1a1a1a; /* Dark sidebar background */
-            padding: 20px;
-            width: 250px; /* Width of sidebar */
-            height: 100vh; /* Full height of the viewport */
-            position: fixed;
-            overflow: auto;
-        }
-        .sidebar a {
-            text-decoration: none;
-            color: #00ff00; /* Neon green */
-            display: block;
-            padding: 10px;
-            font-size: 1.2em; /* Font size */
-            margin: 10px 0; /* Margin for spacing */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-        }
-        .sidebar a:hover {
-            background-color: rgba(0, 255, 0, 0.3); /* Light green hover background */
-            color: #fff; /* White text on hover */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh;
         }
         .content {
-            margin-left: 270px; /* Space for sidebar */
-            padding: 20px; /* Padding for content */
-            width: calc(100% - 270px); /* Adjust width according to sidebar */
-            text-align: center; /* Center the text */
+            background-color: #2e2e2e; /* Slightly darker gray for the content box */
+            width: 80%; /* Set content box width */
+            padding: 40px;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Dark shadow for depth */
+            text-align: center;
+            color: #d3d3d3;
         }
         h1 {
-            color: #00ff00; /* Neon green */
-            font-size: 2.5em; /* Adjusted font size */
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px #00ff00; /* Green glow effect */
+            font-size: 3em; /* Large font for main heading */
+            color: #d3d3d3; /* Light gray */
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Subtle glow effect */
         }
         h2 {
-            color: #00ff00; /* Neon green */
-            font-size: 1.5em; /* Smaller font size */
-            margin: 20px 0; /* Spacing around the greeting */
-            text-shadow: 0 0 10px #00ff00; /* Green glow effect */
+            font-size: 2em;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle glow effect */
         }
         p {
-            font-size: 1.2em; /* Text size for paragraphs */
-            margin: 15px 0; /* Margin for spacing */
-            line-height: 1.6; /* Line height for readability */
+            font-size: 1.2em;
+            margin: 15px 0;
+            line-height: 1.6;
         }
         .skills, .experience, .projects {
-            background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent dark background */
+            background-color: #333; /* Dark background for sections */
             padding: 20px;
             border-radius: 10px; /* Rounded corners */
-            margin: 20px 0; /* Margin for spacing */
-            box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3); /* Green shadow for effect */
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Green shadow effect */
         }
         footer {
             margin-top: 50px;
             color: #888;
-            font-size: 0.9em;
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
-
-    <div class="sidebar">
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="oscp.html">OSCP Notes</a>
-        <a href="bugbounty.html">Bug Bounty</a>
-        <a href="redteam.html">Red Team</a>
-        <a href="iotdevices.html">IoT Devices</a>
-    </div>
 
     <div class="content">
         <h1>Hello Hacker!</h1>
