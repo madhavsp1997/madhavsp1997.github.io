@@ -27,63 +27,38 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
         }
 
         .neon-text {
-            font-size: 4rem;
+            font-size: 5rem;
             font-weight: bold;
             color: #fff;
             text-shadow: 
-                0 0 7px #fff,
-                0 0 10px #fff,
-                0 0 21px #0fa,
-                0 0 42px #0fa,
-                0 0 82px #0fa,
-                0 0 92px #0fa,
-                0 0 102px #0fa,
-                0 0 151px #0fa;
-            animation: pulsate 1.5s infinite alternate;
-        }
-
-        @keyframes pulsate {
-            100% {
-                text-shadow: 
-                    0 0 4px #fff,
-                    0 0 11px #fff,
-                    0 0 19px #0fa,
-                    0 0 40px #0fa,
-                    0 0 80px #0fa,
-                    0 0 90px #0fa,
-                    0 0 100px #0fa,
-                    0 0 150px #0fa;
-            }
-            0% {
-                text-shadow: 
-                    0 0 2px #fff,
-                    0 0 4px #fff,
-                    0 0 6px #fff,
-                    0 0 10px #0fa,
-                    0 0 45px #0fa,
-                    0 0 55px #0fa,
-                    0 0 70px #0fa,
-                    0 0 80px #0fa;
-            }
+                0 0 2px #00ff00,
+                0 0 4px #00ff00,
+                0 0 6px #00ff00;
+            padding: 20px 40px;
+            letter-spacing: 3px;
+            background: transparent;
+            margin-bottom: 1rem;
         }
 
         .subtitle {
-            font-size: 1.5rem;
-            color: #f0f;
-            text-shadow: 0 0 10px #f0f;
-            margin: 1rem 0;
+            font-size: 2rem;
+            color: #ff0000;
+            margin: 1.5rem 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .magic-btn {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
+            padding: 1.2rem 2.4rem;
+            font-size: 1.4rem;
             font-family: 'Orbitron', sans-serif;
             color: #fff;
             background: transparent;
-            border: 2px solid #0ff;
+            border: 2px solid #00ff00;
             border-radius: 5px;
             cursor: pointer;
             position: relative;
@@ -92,29 +67,53 @@
             margin: 2rem 0;
         }
 
-        .magic-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                120deg,
-                transparent,
-                rgba(0, 255, 255, 0.4),
-                transparent
-            );
-            transition: all 0.5s;
-        }
-
-        .magic-btn:hover::before {
-            left: 100%;
-        }
-
         .magic-btn:hover {
-            box-shadow: 0 0 20px #0ff;
-            text-shadow: 0 0 10px #0ff;
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+            background: rgba(0, 255, 0, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .nav-link {
+            color: #00ff00;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-link:hover {
+            background: rgba(0, 255, 0, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .section {
+            margin: 4rem 0;
+            padding: 3rem;
+            border: 1px solid #00ff00;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .section h2 {
+            color: #ff0000;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 1rem;
         }
 
         .content {
@@ -128,90 +127,146 @@
             opacity: 1;
         }
 
-        .section {
-            margin: 4rem 0;
-            padding: 2rem;
-            border: 1px solid #0fa;
-            border-radius: 10px;
-            background: rgba(0, 255, 170, 0.05);
-        }
-
-        .section h2 {
-            color: #0ff;
-            text-shadow: 0 0 10px #0ff;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
-            flex-wrap: wrap;
         }
 
-        .nav-link {
-            color: #0ff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid #0ff;
-            border-radius: 5px;
-            transition: all 0.3s;
+        .about-section {
+            background: rgba(0, 255, 0, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #00ff00;
         }
 
-        .nav-link:hover {
-            background: rgba(0, 255, 255, 0.1);
-            box-shadow: 0 0 20px #0ff;
+        .about-section h3 {
+            color: #ff0000;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .about-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about-section ul li {
+            margin-bottom: 0.5rem;
+            color: #fff;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .about-section ul li::before {
+            content: ">";
+            color: #00ff00;
+            position: absolute;
+            left: 0;
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1rem 0;
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         .skill-tag {
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            border-radius: 25px;
+            color: #ff0000;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(255, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .certification-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .certification-badge {
+            display: inline-block;
             padding: 0.5rem 1rem;
-            background: rgba(0, 255, 255, 0.1);
-            border: 1px solid #0ff;
-            border-radius: 20px;
-            color: #0ff;
-            text-shadow: 0 0 5px #0ff;
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            color: #ff0000;
+            transition: all 0.3s;
+        }
+
+        .certification-badge:hover {
+            background: rgba(255, 0, 0, 0.2);
+            transform: translateY(-2px);
         }
 
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin: 2rem 0;
         }
 
         .project-card {
-            border: 1px solid #f0f;
-            border-radius: 5px;
-            padding: 1rem;
-            background: rgba(255, 0, 255, 0.05);
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.8);
             transition: all 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 20px #f0f;
+            background: rgba(0, 255, 0, 0.05);
+        }
+
+        .project-card h3 {
+            color: #ff0000;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #fff;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            color: #fff;
+            padding: 1rem;
+            background: rgba(0, 255, 0, 0.05);
+            border-radius: 10px;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
-            color: #0ff;
-            text-shadow: 0 0 5px #0ff;
+            padding: 3rem;
+            color: #00ff00;
+            font-size: 1.2rem;
+            border-top: 1px solid #00ff00;
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1 class="neon-text">HELLO HACKER</h1>
+        <h1 class="neon-text">R MADHAV SAPKOTA</h1>
         <p class="subtitle">Cybersecurity Engineer & Red Team Specialist</p>
-        <button class="magic-btn" onclick="revealContent()">Click for Magic ✨</button>
+        <button class="magic-btn" onclick="revealContent()">Enter The Matrix ⚡</button>
     </div>
 
     <div class="content" id="mainContent">
@@ -228,14 +283,46 @@
 
             <section class="section" id="about">
                 <h2>About Me</h2>
-                <p>Welcome to my cybersecurity portfolio. I'm passionate about securing systems and discovering vulnerabilities. As a Red Team Engineer, I specialize in VAPT (Vulnerability Assessment and Penetration Testing) at a dynamic startup.</p>
+                <p class="intro">As a dedicated Cybersecurity Engineer and Red Team Specialist, I bring over 5 years of experience in identifying and exploiting security vulnerabilities across diverse technological landscapes. My expertise spans from traditional network security to cutting-edge cloud infrastructure testing.</p>
+                
+                <div class="about-grid">
+                    <div class="about-section">
+                        <h3>Expertise</h3>
+                        <ul>
+                            <li>Advanced Penetration Testing</li>
+                            <li>Red Team Operations</li>
+                            <li>Threat Modeling & Analysis</li>
+                            <li>Incident Response</li>
+                            <li>Security Architecture Review</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Certifications</h3>
+                        <div class="certification-badges">
+                            <span class="certification-badge">OSCP</span>
+                            <span class="certification-badge">CEH</span>
+                            <span class="certification-badge">Security+</span>
+                            <span class="certification-badge">CISSP</span>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Current Focus</h3>
+                        <p>Leading security assessments for cloud-native applications, developing automated security testing frameworks, and researching emerging threats in IoT ecosystems.</p>
+                    </div>
+                </div>
                 
                 <div class="skills">
-                    <span class="skill-tag">OSINT & Dark Web</span>
-                    <span class="skill-tag">Infrastructure Testing</span>
+                    <span class="skill-tag">Advanced OSINT</span>
+                    <span class="skill-tag">Dark Web Analysis</span>
+                    <span class="skill-tag">Cloud Security</span>
+                    <span class="skill-tag">Network Penetration</span>
                     <span class="skill-tag">Web App Security</span>
-                    <span class="skill-tag">Network Testing</span>
-                    <span class="skill-tag">Vulnerability Assessment</span>
+                    <span class="skill-tag">Mobile Security</span>
+                    <span class="skill-tag">Malware Analysis</span>
+                    <span class="skill-tag">Social Engineering</span>
+                    <span class="skill-tag">Reverse Engineering</span>
                 </div>
             </section>
 
@@ -244,22 +331,22 @@
                 <div class="projects">
                     <div class="project-card">
                         <h3>Cybersecurity Game</h3>
-                        <p>Interactive platform for cybersecurity awareness training.</p>
+                        <p>Interactive platform for cybersecurity awareness training, featuring real-world attack scenarios and defense strategies.</p>
                     </div>
                     <div class="project-card">
                         <h3>Threat Map</h3>
-                        <p>Real-time visualization of global cyber threats and attacks.</p>
+                        <p>Real-time visualization of global cyber threats and attacks using advanced data analytics and machine learning.</p>
                     </div>
                     <div class="project-card">
                         <h3>Attack Tracker</h3>
-                        <p>Advanced system for monitoring and analyzing cyber attacks in real-time.</p>
+                        <p>Advanced system for monitoring and analyzing cyber attacks in real-time with automated incident response capabilities.</p>
                     </div>
                 </div>
             </section>
         </div>
 
         <footer>
-            &copy; 2024 Your Name - Cybersecurity Engineer
+            &copy; 2024 R Madhav Sapkota - Cybersecurity Engineer
         </footer>
     </div>
 
