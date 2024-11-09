@@ -1,0 +1,35 @@
+import React, { useState } from "react";
+import Header from "./components/Header";
+import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import Blog from "./components/Blog";
+import OSCPNotes from "./components/OSCPNotes";
+import BugBounty from "./components/BugBounty";
+import RedTeam from "./components/RedTeam";
+import IoT from "./components/IoT";
+
+function App() {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleContentShow = () => setShowContent(true);
+
+  return (
+    <div>
+      {!showContent ? (
+        <Header onShowContent={handleContentShow} />
+      ) : (
+        <>
+          <AboutMe />
+          <Projects />
+          <Blog />
+          <OSCPNotes />
+          <BugBounty />
+          <RedTeam />
+          <IoT />
+        </>
+      )}
+    </div>
+  );
+}
+
+export default App;
